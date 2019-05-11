@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "@ngma/core": "file:../_core/src",
         "react": "16.8.3",
         "react-native": "0.59.8",
         "react-native-fbsdk": "^0.8.0"

@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native'
 
-import App from '../_core/containers/App'
+import App from '@ngma/core/containers/App'
 
 import { name as appName } from './app.json'
 
