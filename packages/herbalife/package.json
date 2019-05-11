@@ -1,6 +1,5 @@
 {
     "dependencies": {
-        "@ngma/core": "file:../_core/src",
         "react": "16.8.3",
         "react-native": "0.59.8",
         "react-native-fbsdk": "^0.8.0"
@@ -13,10 +12,7 @@
         "metro-react-native-babel-preset": "^0.54.0",
         "react-test-renderer": "16.8.3"
     },
-    "jest": {
-        "preset": "react-native"
-    },
-    "name": "ngma-plus-app",
+    "name": "@ngma/herbalife",
     "private": true,
     "scripts": {
         "android": "react-native run-android",
