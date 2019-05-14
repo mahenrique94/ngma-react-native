@@ -2,6 +2,7 @@
     "dependencies": {
         "@ngma/core": "^0.0.1",
         "react": "16.8.3",
+        "react-dom": "^16.8.6",
         "react-native": "0.59.8",
         "react-native-fbsdk": "^0.8.0"
     },
@@ -9,8 +10,11 @@
         "@babel/core": "^7.4.4",
         "@babel/runtime": "^7.4.4",
         "babel-jest": "^24.8.0",
+        "haul": "^1.0.0-rc.15",
         "jest": "^24.8.0",
         "metro-react-native-babel-preset": "^0.54.0",
+        "react-hot-loader": "4.4.0",
+        "react-native-dotenv": "^0.2.0",
         "react-test-renderer": "16.8.3"
     },
     "name": "@ngma/herbalife",
@@ -20,7 +24,10 @@
         "ios": "react-native run-ios",
         "link": "react-native link",
         "start": "node node_modules/react-native/local-cli/cli.js start",
-        "test": "jest"
+        "start:android": "haul start --platform android",
+        "start:ios": "haul start --platform ios",
+        "test": "jest",
+        "haul": "haul"
     },
     "version": "0.0.1"
 }
