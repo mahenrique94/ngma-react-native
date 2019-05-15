@@ -1,26 +1,23 @@
-import { configs } from '../constants/environments'
-
-import { config } from '../_config/config'
+import { PREFIXES } from '@constants/platforms'
 
 import React from 'react'
 
-import { StyleSheet, Text, View } from 'react-native'
+import { Provider } from 'react-redux'
+
+import Routes from '@routes'
+
+import { store } from '@cfg/store'
+
+import { dependPlatform } from '@utils/platform'
+
+import NavigationService from '@/services/NavigationService'
+
+const prefix = dependPlatform(() => PREFIXES.ANDROID, () => PREFIXES.IOS)
 
 const App = () => (
-    <View style={{ ...styles.container, backgroundColor: config.get(configs.NGMA_APP_PRIMARY_COLOR) }}>
-        <Text style={{ ...styles.title, color: config.get(configs.NGMA_APP_TITLE_COLOR) }}>{`Hello ${config.get(configs.NGMA_APP_TITLE)}`}</Text>
-    </View>
+    <Provider store={store}>
+        <Routes ref={navigatorRef => NavigationService.setTopLevelNavigator(navigatorRef)} uriPrefix={prefix} />
+    </Provider>
 )
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        flex: 1,
-        justifyContent: 'center'
-    },
-    title: {
-        fontSize: 44
-    }
-})
 
 export default App

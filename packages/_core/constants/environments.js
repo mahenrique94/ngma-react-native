@@ -1,5 +1,9 @@
 const environments = {
-    development: 'development'
+    development: 'development',
+    homologation: 'homologation',
+    mock: 'mock',
+    production: 'production',
+    qa: 'qa'
 }
 
 const configs = {
