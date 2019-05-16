@@ -1,0 +1,3 @@
+const backgrounds = {}
+
+export { backgrounds }

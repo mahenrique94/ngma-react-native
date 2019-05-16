@@ -1,0 +1,32 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @commitlint/cli @commitlint/config-conventional husky
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Users/matheuscastiglioni/Library/Android/sdk/platform-tools/
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  10.14.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/matheuscastiglioni/workspace/React Native/ngma-plus-app/node_modules/@lerna/collect-uncommitted'
+
+npm manifest: 
+  {
+      "name": "ngma",
+      "private": true,
+      "devDependencies": {
+          "lerna": "^3.13.4"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

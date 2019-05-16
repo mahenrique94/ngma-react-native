@@ -1,16 +1,16 @@
-import { PREFIXES } from '@constants/platforms'
+import { PREFIXES } from '../constants/platforms'
 
 import React from 'react'
 
 import { Provider } from 'react-redux'
 
-import Routes from '@routes'
+import Routes from '../_config/routes'
 
-import { store } from '@cfg/store'
+import { store } from '../_config/store'
 
-import { dependPlatform } from '@utils/platform'
+import { dependPlatform } from '../utils/platform'
 
-import NavigationService from '@/services/NavigationService'
+import NavigationService from '../services/NavigationService'
 
 const prefix = dependPlatform(() => PREFIXES.ANDROID, () => PREFIXES.IOS)
 
