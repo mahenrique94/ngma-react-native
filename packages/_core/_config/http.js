@@ -1,15 +1,16 @@
+import { configs } from '../constants/environments'
 import { CODES } from '../constants/HTTP'
 import { times } from '../constants/times'
 
 import axios from 'axios'
 
-import { config } from '@config'
+import { config } from './config'
 
 import { getToken, isLogged } from '../utils/auth'
 
 import NavigationService from '../services/NavigationService'
 
-const API_URL = config.api.url
+const API_URL = config.get(configs.NGMA_APP_API_URL)
 
 const http = axios.create({
     baseURL: API_URL,

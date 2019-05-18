@@ -12,20 +12,20 @@ import Link from '../../../components/Link'
 
 import { loginForm as loginFormFields } from '../fields'
 
-const LoginForm = ({ error, loading, navigation, requestLogin }) => (
+const LoginRegister = ({ error, loading, navigation, requestRegister }) => (
     <Container justifyContent="flex-end">
-        <FormLogin legend={i18n.t('subtitles.login')} title={i18n.t('titles.login')}>
-            <Form fields={loginFormFields} onSubmit={requestLogin} submitButtonLabel={i18n.t('buttons.login')} />
-            <Link onClick={() => navigation.navigate('LoginRemember')}>{i18n.t('links.forgetPassword')}</Link>
+        <FormLogin legend={i18n.t('subtitles.register')} title={i18n.t('titles.register')}>
+            <Form fields={loginFormFields} onSubmit={requestRegister} submitButtonLabel={i18n.t('buttons.register')} />
+            <Link onClick={() => navigation.navigate('LoginForm')}>{i18n.t('links.haveAccount')}</Link>
         </FormLogin>
     </Container>
 )
 
-LoginForm.propTypes = {
+LoginRegister.propTypes = {
     error: PropTypes.bool.isRequired,
     loading: PropTypes.bool.isRequired,
     navigation: PropTypes.object.isRequired,
-    requestLogin: PropTypes.func.isRequired
+    requestRegister: PropTypes.func.isRequired
 }
 
-export default withNavigation(LoginForm)
+export default withNavigation(LoginRegister)

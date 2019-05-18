@@ -3,17 +3,18 @@ import { connect } from 'react-redux'
 import { actions } from '../actions'
 import { selectors } from '../selectors'
 
-import LoginSignUp from '../screens/LoginSignUp'
+import LoginRegister from '../screens/LoginRegister'
 
 const mapStateToProps = state => ({
+    error: selectors.getError(state),
     loading: selectors.getLoading(state)
 })
 
 const mapDispatchToProps = {
-    requestLoginFacebook: actions.requestLoginFacebook
+    requestRegister: actions.requestRegister
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(LoginSignUp)
+)(LoginRegister)

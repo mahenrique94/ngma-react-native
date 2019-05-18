@@ -20,6 +20,7 @@ const loginForm = [
         type: 'password',
         validation: yup
             .string()
+            .min(8)
             .required()
             .trim()
     }

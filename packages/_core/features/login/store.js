@@ -1,7 +1,7 @@
 import { Record } from 'immutable'
 
 const store = Record({
-    error: '',
+    error: false,
     loading: false
 })()
 

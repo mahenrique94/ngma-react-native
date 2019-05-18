@@ -1,7 +1,8 @@
 {
     "dependencies": {
         "@ngma/core": "^0.0.1",
-        "react": "16.8.3",
+        "@react-native-community/async-storage": "^1.4.0",
+        "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-native": "0.59.8",
         "react-native-fbsdk": "^0.8.0",
@@ -19,7 +20,7 @@
         "metro-react-native-babel-preset": "^0.54.0",
         "react-hot-loader": "4.4.0",
         "react-native-dotenv": "^0.2.0",
-        "react-test-renderer": "16.8.3"
+        "react-test-renderer": "16.8.6"
     },
     "name": "@ngma/herbalife",
     "private": true,

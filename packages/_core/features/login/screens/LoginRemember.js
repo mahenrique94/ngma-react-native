@@ -17,11 +17,10 @@ const LoginRemember = ({ navigation }) => (
         <FormLogin legend={i18n.t('subtitles.remember')} title={i18n.t('titles.remember')}>
             <Form
                 fields={loginRememberFields}
-                initialValues={{}}
                 onSubmit={values => console.log(values)}
                 submitButtonLabel={i18n.t('buttons.sendEmail')}
             />
-            <Link onClick={() => navigation.navigate('LoginRemember')}>{i18n.t('links.notAMember')}</Link>
+            <Link onClick={() => navigation.navigate('LoginSignUp')}>{i18n.t('links.notAMember')}</Link>
         </FormLogin>
     </Container>
 )

@@ -1,3 +1,19 @@
-const actions = {}
+const CONTEXT_NAME = 'LOGIN'
 
-export { actions }
+const actionsTypes = {
+    [`${CONTEXT_NAME}_REQUEST_LOGIN`]: `${CONTEXT_NAME}_REQUEST_LOGIN`,
+    [`${CONTEXT_NAME}_REQUEST_LOGIN_FACEBOOK`]: `${CONTEXT_NAME}_REQUEST_LOGIN_FACEBOOK`,
+    [`${CONTEXT_NAME}_REQUEST_LOGOUT`]: `${CONTEXT_NAME}_REQUEST_LOGOUT`,
+    [`${CONTEXT_NAME}_REQUEST_REGISTER`]: `${CONTEXT_NAME}_REQUEST_REGISTER`,
+    [`${CONTEXT_NAME}_REQUEST_REMEMBER_PASSWORD`]: `${CONTEXT_NAME}_REQUEST_REMEMBER_PASSWORD`,
+    [`${CONTEXT_NAME}_SET_ERROR`]: `${CONTEXT_NAME}_SET_ERROR`,
+    [`${CONTEXT_NAME}_SET_LOADING`]: `${CONTEXT_NAME}_SET_LOADING`
+}
+
+const commandsTypes = {
+    LOGIN: 'login',
+    LOGIN_FACEBOOK: 'facebook-login',
+    REGISTER: 'register'
+}
+
+export { actionsTypes, commandsTypes }

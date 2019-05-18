@@ -1,13 +1,15 @@
 import { facebook } from '../../../constants/permissions'
 
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect } from 'react'
+import SyncStorage from 'sync-storage'
 
 import { AccessToken, LoginManager } from 'react-native-fbsdk'
 import { withNavigation } from 'react-navigation'
 
 import { i18n } from '../../../_translate/i18n'
 
+import { isLogged } from '../../../utils/auth'
 import { not } from '../../../utils/functions'
 
 import ButtonGradient from '../../../components/ButtonGradient'
@@ -17,15 +19,20 @@ import Form from '../components/form'
 import Link from '../../../components/Link'
 import Row from '../../../components/Row'
 
-const LoginSignUp = ({ navigation }) => {
+const LoginSignUp = ({ loading, navigation, requestLoginFacebook }) => {
+    useEffect(() => {
+        SyncStorage.init().then(() => {
+            if (isLogged()) {
+                navigation.navigate('Home')
+            }
+        })
+    }, [])
+
     const login = () => {
         LoginManager.logInWithReadPermissions(facebook)
             .then(({ isCancelled }) => {
                 if (not(isCancelled)) {
-                    AccessToken.getCurrentAccessToken().then(data => {
-                        console.log('Pegando token...')
-                        console.log(data)
-                    })
+                    AccessToken.getCurrentAccessToken().then(requestLoginFacebook)
                 }
             })
             .catch(error => console.log(error))
@@ -40,7 +47,9 @@ const LoginSignUp = ({ navigation }) => {
                     </ButtonGradient>
                 </Row>
                 <Row>
-                    <ButtonTransparent onClick={() => null}>{i18n.t('buttons.signUpEmail')}</ButtonTransparent>
+                    <ButtonTransparent onClick={() => navigation.navigate('LoginRegister')}>
+                        {i18n.t('buttons.signUpEmail')}
+                    </ButtonTransparent>
                 </Row>
                 <Link onClick={() => navigation.navigate('LoginForm')}>{i18n.t('links.haveAccount')}</Link>
             </Form>
@@ -49,7 +58,9 @@ const LoginSignUp = ({ navigation }) => {
 }
 
 LoginSignUp.propTypes = {
-    navigation: PropTypes.object.isRequired
+    loading: PropTypes.bool.isRequired,
+    navigation: PropTypes.object.isRequired,
+    requestLoginFacebook: PropTypes.func.isRequired
 }
 
 export default withNavigation(LoginSignUp)
