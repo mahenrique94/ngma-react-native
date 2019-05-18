@@ -16,6 +16,7 @@ const StyleGradient = styled(LinearGradient)`
     flex-direction: row;
     justify-content: center;
     padding: 16px;
+    width: ${({ block }) => (block ? 100 : 50)}%;
 `
 
 const StyledButton = styled.Text`
@@ -27,9 +28,9 @@ const StyledButton = styled.Text`
     text-transform: uppercase;
 `
 
-const Button = ({ children, icon, onClick }) => (
+const Button = ({ block, children, icon, onClick }) => (
     <TouchableWithoutFeedback onPress={onClick}>
-        <StyleGradient colors={[colors.primary, colors.secondary]} end={{ x: 1, y: 0 }} start={{ x: 0, y: 0 }}>
+        <StyleGradient block={block} colors={[colors.primary, colors.secondary]} end={{ x: 1, y: 0 }} start={{ x: 0, y: 0 }}>
             {icon && <Icon icon={icon} withMargin />}
             <StyledButton>{children}</StyledButton>
         </StyleGradient>
@@ -37,10 +38,12 @@ const Button = ({ children, icon, onClick }) => (
 )
 
 Button.defaultProps = {
+    block: false,
     icon: null
 }
 
 Button.propTypes = {
+    block: PropTypes.bool,
     children: PropTypes.string.isRequired,
     icon: PropTypes.string,
     onClick: PropTypes.func.isRequired

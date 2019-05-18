@@ -1,4 +1,4 @@
-import { isNull, isUndefined } from 'lodash'
+import { isNull as _isNull, isUndefined as _isUndefined } from 'lodash'
 
 const not = expression => !expression
 
@@ -22,8 +22,8 @@ const isEmpty = o => {
 }
 
 const isNotEmpty = o => !isEmpty(o)
-const isNotNull = o => not(isNull(o))
-const isUndefined = obj => isUndefined(obj)
-const isNotUndefined = obj => not(isUndefined(obj))
+const isNotNull = o => not(_isNull(o))
+const isUndefined = obj => _isUndefined(obj)
+const isNotUndefined = obj => not(_isUndefined(obj))
 
 export { debounce, isEmpty, isNotEmpty, isNotNull, isUndefined, isNotUndefined, not }

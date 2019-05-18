@@ -8,6 +8,7 @@ export default {
 
         config.module.rules.some(rule => {
             if (rule.test && rule.test.source.includes('js')) {
+                rule.exclude = '/node_modules/'
                 rule.use = [
                     {
                         loader: require.resolve('babel-loader'),

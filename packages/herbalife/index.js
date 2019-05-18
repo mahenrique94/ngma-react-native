@@ -1,3 +1,5 @@
+import '@ngma/core/_config/bootstrap'
+
 import { AppRegistry } from 'react-native'
 
 import { configs } from '@ngma/core/constants/environments'
