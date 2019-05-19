@@ -28,7 +28,7 @@
         "android": "react-native run-android",
         "ios": "react-native run-ios",
         "link": "react-native link",
-        "start": "node node_modules/react-native/local-cli/cli.js start",
+        "start": "haul start",
         "start:android": "haul start --platform android",
         "start:ios": "haul start --platform ios",
         "test": "jest",

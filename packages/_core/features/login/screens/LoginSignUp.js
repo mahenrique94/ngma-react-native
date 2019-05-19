@@ -23,7 +23,7 @@ const LoginSignUp = ({ loading, navigation, requestLoginFacebook }) => {
     useEffect(() => {
         SyncStorage.init().then(() => {
             if (isLogged()) {
-                navigation.navigate('Home')
+                // navigation.navigate('Home')
             }
         })
     }, [])
