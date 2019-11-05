@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import Input from '../input'
+import Input from '../Input'
 
 const FormField = props => <Input {...props} />
 

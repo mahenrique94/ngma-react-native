@@ -5,7 +5,7 @@ import { compose } from 'recompose'
 import { TextField } from 'react-native-material-textfield'
 import { handleTextInput, withNextInputAutoFocusInput } from 'react-native-formik'
 
-import { colors } from '../../helpers/colors'
+import { colors } from '@helpers/colors'
 
 const Input = styled(TextField).attrs({
     baseColor: colors.text,

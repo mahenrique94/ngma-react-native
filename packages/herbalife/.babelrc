@@ -1,3 +1,42 @@
 {
+    "plugins": [
+        [
+            "babel-plugin-styled-components",
+            {
+                "displayName": true,
+                "fileName": true,
+                "minify": true,
+                "pure": true
+            }
+        ],
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "@": "../_core",
+                    "@cfg": "../_core/_config",
+                    "@components": "../_core/components",
+                    "@config": "../_core/_config/config",
+                    "@constants": "../_core/constants",
+                    "@containers": "../_core/containers",
+                    "@env": "../_core/_environments",
+                    "@features": "../_core/features",
+                    "@fonts": "../_core/_assets/fonts",
+                    "@helpers": "../_core/helpers",
+                    "@hoc": "../_core/hoc",
+                    "@http": "../_core/_config/http",
+                    "@i18n": "../_core/_translate/i18n",
+                    "@icons": "../_core/_assets/icons",
+                    "@img": "../_core/_assets/img",
+                    "@js": "../_core/_assets/js",
+                    "@mocks": "../_core/_config/mocks",
+                    "@routes": "../_core/_config/routes",
+                    "@services": "../_core/services",
+                    "@utils": "../_core/utils"
+                },
+                "root": ["../_core"]
+            }
+        ]
+    ],
     "presets": ["module:metro-react-native-babel-preset", "module:react-native-dotenv"]
 }

@@ -3,8 +3,6 @@ import { configs } from '../constants/environments'
 import { config } from '../_config/config'
 import { http } from '../_config/http'
 
-import axios from 'axios'
-
 const handleError = error => {
     if (error.response) {
         if (error.response.data) {
@@ -24,7 +22,7 @@ const handleError = error => {
 const handleSuccess = ({ data }) => data.result
 
 const createCommand = (endpoint, command, payload) =>
-    axios
+    http
         .post(`${config.get(configs.NGMA_APP_API_URL)}/${endpoint}`, {
             command,
             payload: { ...payload, company_id: config.get(configs.NGMA_APP_COMPANY_ID) }
