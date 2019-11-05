@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "paths": {
+            "@config": ["./_config/config"],
+            "@env": ["./_environments"],
+            "@http": ["./_config/http"],
+            "@i18n": ["./_translate/i18n"],
+            "@mocks": ["./_config/mocks"],
+            "@routes": ["./_config/routes"],
+            "@/*": ["./*"],
+            "@cfg/*": ["./_config/*"],
+            "@components/*": ["./components/*"],
+            "@constants/*": ["./constants/*"],
+            "@containers/*": ["./containers/*"],
+            "@css/*": ["./_assets/css/*"],
+            "@env/*": ["./_environments/*"],
+            "@features/*": ["./features/*"],
+            "@fonts/*": ["./_assets/fonts/*"],
+            "@helpers/*": ["./helpers/*"],
+            "@hoc/*": ["./hoc/*"],
+            "@icons/*": ["./_assets/icons/*"],
+            "@img/*": ["./_assets/img/*"],
+            "@js/*": ["./_assets/js/*"],
+            "@utils/*": ["./utils/*"]
+        },
+        "sourceMap": true,
+        "target": "es5"
+    },
+    "exclude": ["build", "coverage", "node_modules"],
+    "include": ["./**/*"]
+}

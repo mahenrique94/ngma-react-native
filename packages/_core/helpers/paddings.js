@@ -1,0 +1,3 @@
+const paddings = {}
+
+export { paddings }

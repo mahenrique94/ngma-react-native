@@ -1,0 +1,6 @@
+.idea
+.vscode
+/android
+/ios
+/node_modules
+*[Model]
