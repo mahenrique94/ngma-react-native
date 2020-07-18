@@ -6,7 +6,7 @@
         "i18next": "^15.1.1",
         "immutable": "^4.0.0-rc.12",
         "jwt-decode": "^2.2.0",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.19",
         "moment": "^2.24.0",
         "prop-types": "^15.7.2",
         "pubsub-js": "^1.7.0",
